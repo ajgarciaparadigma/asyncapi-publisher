@@ -1,0 +1,28 @@
+asyncapi: '2.6.0'
+info:
+  title: Hello Kafka API
+  version: '1.0.0'
+  description: |
+    Example to ilustrate kafka generator
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+  test:
+    url: localhost:8092
+    protocol: userPassword 
+    description: Test broker
+defaultContentType: application/json
+channels:
+  com.paradigma.event.hello:
+    description: Greeting topic.
+    publish:
+      message:
+        payload:
+          type: string
+          pattern: '^hello .+$'
+    subscribe:
+      operationId: consumeGreetings
+      message:
+        payload:
+          type: string
