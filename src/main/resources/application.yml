@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    function:
+      definition: consumeGreetings;comParadigmaEventHelloConsumer
+    stream:
+      bindings:
+        consumeGreetings-out-0:
+          destination: com.paradigma.event.hello
+        comParadigmaEventHelloConsumer-in-0:
+          destination: com.paradigma.event.hello
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+
