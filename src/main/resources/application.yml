@@ -8,9 +8,25 @@ spring:
           destination: com.paradigma.event.hello
         comParadigmaEventHelloConsumer-in-0:
           destination: com.paradigma.event.hello
+      kafka:
+        binder:
+          brokers: 'pkc-6ojv2.us-west4.gcp.confluent.cloud:9092'
+          configuration.sasl.jaas.config: "org.apache.kafka.common.security.plain.PlainLoginModule required username='AMJ4GS6GS7FVZPTY' password='XXXX';"
+          configuration:
+            sasl:
+              mechanism: PLAIN
+            security:
+              protocol: SASL_SSL
 logging:
   level:
     root: info
     org:
       springframework: info
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
