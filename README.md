@@ -13,7 +13,7 @@ npm install -g @asyncapi/generator
 2- Run generator
   I've customized package, use actuator and useServers
 ```shell
-ag  -p javaPackage=com.paradigma.poc.asyncapi -p useServers=true -p actuator=true ./asyncapi.yaml 
+ag  -p javaPackage=com.paradigma.poc.asyncapi -p useServers=true -p actuator=true ./asyncapi.yaml https://github.com/asyncapi/java-spring-cloud-stream-template.git
 ```
 3- Config confluent cloud server and topic [link](https://www.confluent.io/confluent-cloud/tryfree/)
 
