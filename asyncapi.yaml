@@ -9,7 +9,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0
 servers:
   test:
-    url: localhost:8092
+    url: localhost:29092
     protocol: userPassword 
     description: Test broker
 defaultContentType: application/json
