@@ -1,5 +1,5 @@
 asyncapi: '2.6.0'
-apiVersion: '1.0.0'
+apiVersion: backstage.io/v1alpha1
 info:
   title: Hello Kafka API
   version: '1.0.0'
